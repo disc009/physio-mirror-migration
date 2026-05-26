@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/therapie")({
   component: Therapie,
@@ -14,90 +15,117 @@ export const Route = createFileRoute("/therapie")({
   }),
 });
 
+type Therapy = {
+  title: string;
+  description: string;
+  audience: string;
+  link?: string;
+};
+
+const neuro: Therapy[] = [
+  {
+    title: "Vojta",
+    description:
+      "Reflexlokomotion zur Aktivierung angeborener Bewegungsmuster im zentralen Nervensystem.",
+    audience: "Säuglinge, Kinder & Erwachsene",
+    link: "http://www.vojta.com/de/vojta-prinzip/vojta-prinzip-2",
+  },
+  {
+    title: "Bobath",
+    description:
+      "24-Stunden-Konzept zur Förderung von Haltung und Bewegung bei neurologischen Erkrankungen.",
+    audience: "Säuglinge, Kinder & Erwachsene",
+    link: "https://www.bobath-vereinigung.de/das-bobath-konzept/",
+  },
+  {
+    title: "Castillo Morales®",
+    description:
+      "Neurophysiologisches Konzept mit Schwerpunkt auf Körperhaltung, Mimik und orofazialer Funktion.",
+    audience: "Säuglinge, Kinder & Erwachsene",
+    link: "http://castillomoralesvereinigung.de/Castillodata/Deutsch/Konzept.html",
+  },
+];
+
+const manuell: Therapy[] = [
+  {
+    title: "Dreidimensionale manuelle Fußtherapie",
+    description:
+      "Behandlung von Fußfehlstellungen nach Zukunft-Huber – sanft, gezielt und in alle Bewegungsebenen.",
+    audience: "Säuglinge & Kinder",
+    link: "http://www.zukunft-huber.de/angebot.php?nid=5&hnaviid=3",
+  },
+  {
+    title: "Manuelle Lymphdrainage",
+    description:
+      "Sanfte Grifftechnik zur Anregung des Lymphflusses bei Schwellungen und Ödemen.",
+    audience: "Kinder & Erwachsene",
+    link: "http://lymphklinik.com/",
+  },
+];
+
+const ergaenzend: Therapy[] = [
+  {
+    title: "Kinesio-Taping",
+    description:
+      "Elastische Tapes zur Unterstützung von Muskeln, Gelenken und Lymphsystem im Alltag.",
+    audience: "Kinder & Erwachsene",
+    link: "http://www2.k-taping.eu/information-zu-k-taping",
+  },
+  {
+    title: "Kinderrückenschule nach Felix Fit®",
+    description:
+      "Spielerisches Präventionsprogramm für eine starke Haltung und gesunden Rücken.",
+    audience: "Kinder",
+  },
+];
+
+function TherapyCard({ t }: { t: Therapy }) {
+  return (
+    <article className="therapy-card">
+      <h3>{t.title}</h3>
+      <p className="therapy-audience">{t.audience}</p>
+      <p className="therapy-desc">{t.description}</p>
+      {t.link && (
+        <a
+          href={t.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="therapy-link"
+        >
+          Mehr Info <ExternalLink size={14} />
+        </a>
+      )}
+    </article>
+  );
+}
+
+function Section({ title, items }: { title: string; items: Therapy[] }) {
+  return (
+    <section className="therapy-section">
+      <h2>{title}</h2>
+      <div className="therapy-grid">
+        {items.map((t) => (
+          <TherapyCard key={t.title} t={t} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Therapie() {
   return (
     <div className="c-content">
-      <h1>
-        <img
-          className="alignleft"
-          src="http://www.physio-bueren.de/wp-content/uploads/physio-bueren-therapie-1-kreis.png"
-          alt=""
-          width={247}
-          height={360}
-        />
-        Bei uns sind Sie in den besten Händen
-      </h1>
+      <h1>Bei uns sind Sie in den besten Händen</h1>
       <p>
-        Durch unsere qualifizierten Ausbildungsgänge, sowie laufende Fort- und
+        Durch unsere qualifizierten Ausbildungsgänge sowie laufende Fort- und
         Weiterbildungen bieten wir neben der klassischen
         Physiotherapie/Krankengymnastik folgende Therapien an:
       </p>
-      <p>
-        <img
-          className="alignright"
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-therapie-2-kreis.png"
-          alt=""
-          width={295}
-          height={417}
-        />
-      </p>
-      <ul>
-        <li>
-          <a
-            href="http://www.vojta.com/de/vojta-prinzip/vojta-prinzip-2"
-            target="_blank"
-            rel="noopener"
-          >
-            Vojta für Säuglinge, Kinder und Erwachsene
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.bobath-vereinigung.de/das-bobath-konzept/"
-            target="_blank"
-            rel="noopener"
-          >
-            Bobath für Säuglinge, Kinder und Erwachsene
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://castillomoralesvereinigung.de/Castillodata/Deutsch/Konzept.html"
-            target="_blank"
-            rel="noopener"
-          >
-            Castillo Morales® für Säuglinge, Kinder und Erwachsene
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://www.zukunft-huber.de/angebot.php?nid=5&hnaviid=3"
-            target="_blank"
-            rel="noopener"
-          >
-            Dreidimensionale manuelle Fußtherapie
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://lymphklinik.com/"
-            target="_blank"
-            rel="noopener"
-          >
-            Manuelle Lymphdrainage
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://www2.k-taping.eu/information-zu-k-taping"
-            target="_blank"
-            rel="noopener"
-          >
-            Kinesio-Taping
-          </a>
-        </li>
-        <li>Kinderrückenschule nach Felix Fit®</li>
-      </ul>
+
+      <Section title="Neurophysiologische Konzepte" items={neuro} />
+      <Section title="Manuelle Therapien" items={manuell} />
+      <Section title="Ergänzende Angebote" items={ergaenzend} />
+
       <div className="down" />
     </div>
   );

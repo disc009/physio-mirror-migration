@@ -222,6 +222,79 @@ header.site-header {
   border: 0;
 }
 
+/* Therapie */
+.therapy-section {
+  padding: 20px 0 10px;
+}
+.therapy-section h2 {
+  font-family: "Caveat", "Bradley Hand", cursive;
+  font-size: 24pt;
+  font-weight: 700;
+  padding: 18px 0 14px;
+  border-bottom: 1px solid rgba(59, 70, 27, 0.15);
+  margin-bottom: 18px;
+}
+.therapy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.therapy-card {
+  background: #fff;
+  border: 1px solid rgba(59, 70, 27, 0.12);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.therapy-card:hover {
+  border-color: rgb(242, 150, 175);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -12px rgba(59, 70, 27, 0.25);
+}
+.therapy-card h3 {
+  font-family: "Caveat", "Bradley Hand", cursive;
+  font-size: 20pt;
+  font-weight: 700;
+  padding: 0;
+  line-height: 1.1;
+}
+.therapy-audience {
+  font-size: 9.5pt;
+  font-style: italic;
+  opacity: 0.7;
+  padding: 0 0 4px;
+}
+.therapy-desc {
+  font-size: 10.5pt;
+  line-height: 16pt;
+  padding: 0;
+  flex: 1;
+}
+.therapy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10pt;
+  text-decoration: none;
+  color: rgb(59, 70, 27);
+  border-bottom: 1px solid rgba(59, 70, 27, 0.3);
+  align-self: flex-start;
+  padding-bottom: 1px;
+  margin-top: 6px;
+}
+.therapy-link:hover {
+  color: rgb(242, 150, 175);
+  border-color: rgb(242, 150, 175);
+}
+@media (max-width: 800px) {
+  .therapy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 footer.site-footer {
   text-align: center;
   padding: 20px;
