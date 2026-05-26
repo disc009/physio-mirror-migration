@@ -106,7 +106,7 @@ function Impressum() {
         Zuggerbebbche GRAFIK DESIGN &amp; FASHION<br />
         Nadine Brüggert<br />
         Mobil +49 (0)171 6482245<br />
-        <a href="mailto:info@zuggerbebbche.com">info@zuggerbebbche.com</a><br />
+        <ObfuscatedEmail email="info@zuggerbebbche.com" /><br />
         <a href="http://www.zuggerbebbche.com" target="_blank" rel="noopener">www.zuggerbebbche.com</a>
       </p>
       <div className="down" />
