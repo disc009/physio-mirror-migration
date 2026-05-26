@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 
 export const Route = createFileRoute("/kontakt")({
   component: Kontakt,
