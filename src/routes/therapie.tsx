@@ -115,14 +115,31 @@ function Section({ title, items }: { title: string; items: Therapy[] }) {
 function Therapie() {
   return (
     <div className="c-content">
-      <h1>Bei uns sind Sie in den besten Händen</h1>
-      <p>
-        Durch unsere qualifizierten Ausbildungsgänge sowie laufende Fort- und
-        Weiterbildungen bieten wir neben der klassischen
-        Physiotherapie/Krankengymnastik folgende Therapien an:
-      </p>
+      <div className="therapy-hero">
+        <img
+          src="http://www.physio-bueren.de/wp-content/uploads/physio-bueren-therapie-1-kreis.png"
+          alt="Therapie in Büren"
+          className="therapy-hero-img"
+        />
+        <div>
+          <h1>Bei uns sind Sie in den besten Händen</h1>
+          <p>
+            Durch unsere qualifizierten Ausbildungsgänge sowie laufende Fort-
+            und Weiterbildungen bieten wir neben der klassischen
+            Physiotherapie/Krankengymnastik folgende Therapien an:
+          </p>
+        </div>
+      </div>
 
       <Section title="Neurophysiologische Konzepte" items={neuro} />
+
+      <figure className="therapy-figure">
+        <img
+          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-therapie-2-kreis.png"
+          alt="Behandlung in der Praxis"
+        />
+      </figure>
+
       <Section title="Manuelle Therapien" items={manuell} />
       <Section title="Ergänzende Angebote" items={ergaenzend} />
 
@@ -130,3 +147,4 @@ function Therapie() {
     </div>
   );
 }
+
