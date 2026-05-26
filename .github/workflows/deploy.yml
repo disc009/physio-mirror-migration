@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm install
@@ -24,7 +24,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy via SCP
+      - name: Deploy build to Plesk
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
