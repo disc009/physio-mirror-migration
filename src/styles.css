@@ -222,6 +222,38 @@ header.site-header {
   border: 0;
 }
 
+/* Therapie hero & figure */
+.therapy-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.therapy-hero-img {
+  width: 220px;
+  height: auto;
+}
+.therapy-figure {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+.therapy-figure img {
+  max-width: 280px;
+  height: auto;
+  display: inline-block;
+}
+@media (max-width: 800px) {
+  .therapy-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .therapy-hero-img {
+    margin: 0 auto;
+    width: 180px;
+  }
+}
+
 /* Therapie */
 .therapy-section {
   padding: 20px 0 10px;
