@@ -1,26 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Home,
+  head: () => ({
+    meta: [
+      { title: "Physiotherapiezentrum Katrin Schulte B.A." },
+      {
+        name: "description",
+        content:
+          "Physiotherapiepraxis Katrin Schulte B.A. in Büren – herzlich willkommen.",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="c-content">
+      <h1>
+        <img
+          className="alignleft"
+          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-home-1-kreis.png"
+          alt=""
+          width={247}
+          height={324}
+        />
+        Herzlich Willkommen
+      </h1>
+      <p>
+        auf der Homepage der Physiotherapiepraxis Katrin Schulte.
+        <br />
+        Lernen Sie uns kennen und schauen Sie sich um!
+      </p>
+      <p>
+        <img
+          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-home-2-kreis.png"
+          alt=""
+          width={295}
+          height={403}
+        />
+      </p>
+      <div className="down" />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
