@@ -32,7 +32,7 @@ function Impressum() {
         33142 Büren<br />
         Tel.: +49 (0)2951 932897<br />
         Fax: +49 (0)2951 932896<br />
-        <a className="unscheinbar" href="mailto:info@physio-bueren.de">info@physio-bueren.de</a><br />
+        <ObfuscatedEmail className="unscheinbar" email="info@physio-bueren.de" /><br />
         <a className="unscheinbar" href="https://www.physio-bueren.de/">www.physio-bueren.de</a>
       </p>
       <p>
