@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { SiteHeader } from "@/components/SiteHeader";
 
 function NotFoundComponent() {
   return (
@@ -113,7 +114,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <SiteHeader />
+      <main id="content" className="content" role="main">
+        <Outlet />
+      </main>
+      <footer className="site-footer">
+        © Physiotherapie Katrin Schulte B.A. · Bruchstraße 9 · 33142 Büren
+      </footer>
     </QueryClientProvider>
   );
 }

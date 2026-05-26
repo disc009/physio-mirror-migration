@@ -9,8 +9,62 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TherapieRouteImport } from './routes/therapie'
+import { Route as Team2RouteImport } from './routes/team-2'
+import { Route as TeamRouteImport } from './routes/team'
+import { Route as PraxisRouteImport } from './routes/praxis'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as AnfahrtRouteImport } from './routes/anfahrt'
+import { Route as AktuellesRouteImport } from './routes/aktuelles'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TherapieRoute = TherapieRouteImport.update({
+  id: '/therapie',
+  path: '/therapie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Team2Route = Team2RouteImport.update({
+  id: '/team-2',
+  path: '/team-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PraxisRoute = PraxisRouteImport.update({
+  id: '/praxis',
+  path: '/praxis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnfahrtRoute = AnfahrtRouteImport.update({
+  id: '/anfahrt',
+  path: '/anfahrt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AktuellesRoute = AktuellesRouteImport.update({
+  id: '/aktuelles',
+  path: '/aktuelles',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +73,158 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aktuelles': typeof AktuellesRoute
+  '/anfahrt': typeof AnfahrtRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/praxis': typeof PraxisRoute
+  '/team': typeof TeamRoute
+  '/team-2': typeof Team2Route
+  '/therapie': typeof TherapieRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aktuelles': typeof AktuellesRoute
+  '/anfahrt': typeof AnfahrtRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/praxis': typeof PraxisRoute
+  '/team': typeof TeamRoute
+  '/team-2': typeof Team2Route
+  '/therapie': typeof TherapieRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aktuelles': typeof AktuellesRoute
+  '/anfahrt': typeof AnfahrtRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/praxis': typeof PraxisRoute
+  '/team': typeof TeamRoute
+  '/team-2': typeof Team2Route
+  '/therapie': typeof TherapieRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aktuelles'
+    | '/anfahrt'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/praxis'
+    | '/team'
+    | '/team-2'
+    | '/therapie'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aktuelles'
+    | '/anfahrt'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/praxis'
+    | '/team'
+    | '/team-2'
+    | '/therapie'
+  id:
+    | '__root__'
+    | '/'
+    | '/aktuelles'
+    | '/anfahrt'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/praxis'
+    | '/team'
+    | '/team-2'
+    | '/therapie'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AktuellesRoute: typeof AktuellesRoute
+  AnfahrtRoute: typeof AnfahrtRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
+  PraxisRoute: typeof PraxisRoute
+  TeamRoute: typeof TeamRoute
+  Team2Route: typeof Team2Route
+  TherapieRoute: typeof TherapieRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/therapie': {
+      id: '/therapie'
+      path: '/therapie'
+      fullPath: '/therapie'
+      preLoaderRoute: typeof TherapieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team-2': {
+      id: '/team-2'
+      path: '/team-2'
+      fullPath: '/team-2'
+      preLoaderRoute: typeof Team2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/praxis': {
+      id: '/praxis'
+      path: '/praxis'
+      fullPath: '/praxis'
+      preLoaderRoute: typeof PraxisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/anfahrt': {
+      id: '/anfahrt'
+      path: '/anfahrt'
+      fullPath: '/anfahrt'
+      preLoaderRoute: typeof AnfahrtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aktuelles': {
+      id: '/aktuelles'
+      path: '/aktuelles'
+      fullPath: '/aktuelles'
+      preLoaderRoute: typeof AktuellesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +237,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AktuellesRoute: AktuellesRoute,
+  AnfahrtRoute: AnfahrtRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
+  PraxisRoute: PraxisRoute,
+  TeamRoute: TeamRoute,
+  Team2Route: Team2Route,
+  TherapieRoute: TherapieRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
