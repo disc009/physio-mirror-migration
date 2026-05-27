@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import home1 from "@/assets/wp/physio-bueren-home-1-kreis.png";
+import home2 from "@/assets/wp/physio-bueren-home-2-kreis.png";
 
 export const Route = createFileRoute("/")({
   component: Home,
