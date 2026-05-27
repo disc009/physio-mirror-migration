@@ -17,7 +17,7 @@ function Impressum() {
     <div className="c-content">
       <div style={{ float: "left", paddingRight: 20 }}>
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-impressum-kreis.png"
+          src={impressumKreis}
           alt=""
           width={247}
           height={324}
