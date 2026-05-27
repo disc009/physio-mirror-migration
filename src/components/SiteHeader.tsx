@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import logo from "@/assets/wp/logo-physiotherapie-zentrum-bueren_2.jpg";
 
 const TOP = [
   { to: "/datenschutz", label: "Datenschutz" },
