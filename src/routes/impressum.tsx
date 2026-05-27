@@ -101,6 +101,10 @@ function Impressum() {
           www.it-discher.de
         </a>
       </p>
+      <p>
+        <strong>Fotografie</strong><br />
+        Sonja Maschkio / Studio Kirchner
+      </p>
 
       <div className="down" />
     </div>
