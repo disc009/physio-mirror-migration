@@ -37,7 +37,7 @@ export function SiteHeader() {
         <div className="logo">
           <Link to="/" title="Startseite">
             <img
-              src="https://www.physio-bueren.de/wp-content/themes/physio/img/logo-physiotherapie-zentrum-bueren_2.jpg"
+              src={logo}
               width={284}
               height={96}
               alt="Physiotherapie Zentrum Rosenstraße Büren"
