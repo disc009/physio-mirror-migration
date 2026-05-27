@@ -119,7 +119,7 @@ function Therapie() {
     <div className="c-content">
       <div className="therapy-hero">
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/physio-bueren-therapie-1-kreis.png"
+          src={therapie1}
           alt="Therapie in Büren"
           className="therapy-hero-img"
         />
