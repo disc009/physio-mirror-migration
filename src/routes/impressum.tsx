@@ -91,24 +91,17 @@ function Impressum() {
         umgehend entfernen.
       </p>
       <p>
-        Ein großes Dankeschön an die tollen kleinen Fotomodels der Fotografin{" "}
-        <a href="http://www.kirchhoff-fotografie.de" target="_blank" rel="noopener">
-          Sonja Maschkio
-        </a>{" "}
-        und an das{" "}
-        <a href="https://studio-kirchner.de" target="_blank" rel="noopener">
-          Studio Kirchner
-        </a>
-        .
-      </p>
-      <p>
         <strong>Webdesign, Konzept, Gestaltung und Umsetzung</strong><br />
-        Zuggerbebbche GRAFIK DESIGN &amp; FASHION<br />
-        Nadine Brüggert<br />
-        Mobil +49 (0)171 6482245<br />
-        <ObfuscatedEmail email="info@zuggerbebbche.com" /><br />
-        <a href="http://www.zuggerbebbche.com" target="_blank" rel="noopener">www.zuggerbebbche.com</a>
+        Discher IT-Service<br />
+        Zur Sauerkanzel 21<br />
+        33165 Lichtenau<br />
+        Tel.: +49 (0)172 4495902<br />
+        <ObfuscatedEmail email="info@it-discher.de" /><br />
+        <a href="https://www.it-discher.de" target="_blank" rel="noopener noreferrer">
+          www.it-discher.de
+        </a>
       </p>
+
       <div className="down" />
     </div>
   );
