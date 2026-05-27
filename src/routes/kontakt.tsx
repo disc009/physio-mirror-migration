@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
+import kontaktKreis from "@/assets/wp/physio-bueren-kontakt-kreis.png";
 
 export const Route = createFileRoute("/kontakt")({
   component: Kontakt,
@@ -17,7 +18,7 @@ function Kontakt() {
       <h1>
         <img
           className="alignleft"
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-kontakt-kreis.png"
+          src={kontaktKreis}
           alt=""
           width={247}
           height={324}

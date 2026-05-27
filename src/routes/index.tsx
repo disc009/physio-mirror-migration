@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import home1 from "@/assets/wp/physio-bueren-home-1-kreis.png";
+import home2 from "@/assets/wp/physio-bueren-home-2-kreis.png";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -20,7 +22,7 @@ function Home() {
       <h1>
         <img
           className="alignleft"
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-home-1-kreis.png"
+          src={home1}
           alt=""
           width={247}
           height={324}
@@ -34,7 +36,7 @@ function Home() {
       </p>
       <p>
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-home-2-kreis.png"
+          src={home2}
           alt=""
           width={295}
           height={403}

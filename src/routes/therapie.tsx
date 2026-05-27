@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
+import therapie1 from "@/assets/wp/physio-bueren-therapie-1-kreis.png";
+import therapie2 from "@/assets/wp/physio-bueren-therapie-2-kreis.png";
 
 export const Route = createFileRoute("/therapie")({
   component: Therapie,
@@ -117,7 +119,7 @@ function Therapie() {
     <div className="c-content">
       <div className="therapy-hero">
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/physio-bueren-therapie-1-kreis.png"
+          src={therapie1}
           alt="Therapie in Büren"
           className="therapy-hero-img"
         />
@@ -135,7 +137,7 @@ function Therapie() {
 
       <figure className="therapy-figure">
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-therapie-2-kreis.png"
+          src={therapie2}
           alt="Behandlung in der Praxis"
         />
       </figure>

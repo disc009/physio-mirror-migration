@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import anfahrtKreis from "@/assets/wp/physio-bueren-anfahrt-kreis.png";
 
 export const Route = createFileRoute("/anfahrt")({
   component: Anfahrt,
@@ -16,7 +17,7 @@ function Anfahrt() {
       <h1>
         <img
           className="alignleft"
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-anfahrt-kreis.png"
+          src={anfahrtKreis}
           alt=""
           width={247}
           height={324}
