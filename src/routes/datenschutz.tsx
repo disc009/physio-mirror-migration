@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import ObfuscatedEmail from "@/components/ObfuscatedEmail";
+import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
 
 export const Route = createFileRoute("/datenschutz")({
   component: Datenschutz,
