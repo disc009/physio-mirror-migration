@@ -137,7 +137,7 @@ function Therapie() {
 
       <figure className="therapy-figure">
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-therapie-2-kreis.png"
+          src={therapie2}
           alt="Behandlung in der Praxis"
         />
       </figure>
