@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
+import therapie1 from "@/assets/wp/physio-bueren-therapie-1-kreis.png";
+import therapie2 from "@/assets/wp/physio-bueren-therapie-2-kreis.png";
 
 export const Route = createFileRoute("/therapie")({
   component: Therapie,
