@@ -36,7 +36,7 @@ function Home() {
       </p>
       <p>
         <img
-          src="http://www.physio-bueren.de/wp-content/uploads/2014/02/physio-bueren-home-2-kreis.png"
+          src={home2}
           alt=""
           width={295}
           height={403}
