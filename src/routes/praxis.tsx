@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Lightbox } from "@/components/Lightbox";
 
 const IMAGES = [
   "BUR_230315_0482.jpg",
@@ -13,7 +15,7 @@ const IMAGES = [
   "BUR_230315_0446-scaled.jpg",
   "BUR_230315_0443.jpg",
   "BUR_230315_0445.jpg",
-];
+].map((f) => `https://www.physio-bueren.de/wp-content/uploads/${f}`);
 
 export const Route = createFileRoute("/praxis")({
   component: Praxis,
@@ -30,6 +32,8 @@ export const Route = createFileRoute("/praxis")({
 });
 
 function Praxis() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <div className="c-content">
       <h1>Bei uns steht der individuelle Patient im Mittelpunkt</h1>
@@ -54,21 +58,26 @@ function Praxis() {
         eine angenehme Atmosphäre. Schauen Sie sich um und überzeugen sich selbst!
       </p>
       <div className="gallery">
-        {IMAGES.map((src) => (
-          <a
+        {IMAGES.map((src, i) => (
+          <button
             key={src}
-            href={`https://www.physio-bueren.de/wp-content/uploads/${src}`}
-            target="_blank"
-            rel="noopener"
+            type="button"
+            className="gallery-item"
+            onClick={() => setOpenIndex(i)}
+            aria-label={`Bild ${i + 1} öffnen`}
           >
-            <img
-              src={`https://www.physio-bueren.de/wp-content/uploads/${src}`}
-              alt=""
-              loading="lazy"
-            />
-          </a>
+            <img src={src} alt="" loading="lazy" />
+          </button>
         ))}
       </div>
+      {openIndex !== null && (
+        <Lightbox
+          images={IMAGES}
+          index={openIndex}
+          onClose={() => setOpenIndex(null)}
+          onChange={setOpenIndex}
+        />
+      )}
     </div>
   );
 }
