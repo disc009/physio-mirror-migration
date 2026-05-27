@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import anfahrtKreis from "@/assets/wp/physio-bueren-anfahrt-kreis.png";
 
 export const Route = createFileRoute("/anfahrt")({
   component: Anfahrt,
