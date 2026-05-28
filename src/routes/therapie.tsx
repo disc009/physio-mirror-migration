@@ -37,7 +37,7 @@ const neuro: Therapy[] = [
     description:
       "24-Stunden-Konzept zur Förderung von Haltung und Bewegung bei neurologischen Erkrankungen.",
     audience: "Säuglinge, Kinder & Erwachsene",
-    link: "https://www.bobath-vereinigung.de/das-bobath-konzept/",
+    link: "https://www.bobath-vereinigung.de/",
   },
   {
     title: "Castillo Morales®",
