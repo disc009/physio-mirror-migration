@@ -101,10 +101,9 @@ function TherapyCard({ t }: { t: Therapy }) {
   );
 }
 
-function Section({ title, items }: { title: string; items: Therapy[] }) {
+function Section({ items }: { items: Therapy[] }) {
   return (
     <section className="therapy-section">
-      <h2>{title}</h2>
       <div className="therapy-grid">
         {items.map((t) => (
           <TherapyCard key={t.title} t={t} />
