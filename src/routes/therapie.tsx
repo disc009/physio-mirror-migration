@@ -35,7 +35,7 @@ const neuro: Therapy[] = [
   {
     title: "Bobath",
     description:
-      "24-Stunden-Konzept zur Förderung von Haltung und Bewegung bei neurologischen Erkrankungen.",
+      "Individuelles Therapiekonzept für Menschen jeden Alters mit neurologisch bedingten Bewegungsstörungen – von Frühgeborenen über Kinder bis zu Erwachsenen.",
     audience: "Säuglinge, Kinder & Erwachsene",
     link: "https://www.bobath-vereinigung.de/",
   },
