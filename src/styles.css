@@ -121,8 +121,8 @@ header.site-header {
   width: 107px;
   height: 107px;
   border-radius: 50%;
-  background-color: rgb(59, 70, 27);
-  color: white;
+  background-color: #B6E624;
+  color: rgb(59, 70, 27);
   font-size: 10pt;
   text-decoration: none;
   transition: background-color 0.2s;
