@@ -1,6 +1,6 @@
 import { createServer } from "node:http";
 import { Readable } from "node:stream";
-import app from "./server/index.js";
+import app from "./server/server.js";
 
 const port = Number(process.env.PORT || 3000);
 
@@ -27,7 +27,6 @@ createServer(async (req, res) => {
     });
 
     const response = await app.fetch(request, process.env, {});
-
     res.statusCode = response.status;
     response.headers.forEach((value, key) => res.setHeader(key, value));
 
