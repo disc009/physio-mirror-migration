@@ -200,6 +200,9 @@ header.site-header {
   margin: 0 auto;
   display: block;
 }
+.team-grid img.bw {
+  filter: grayscale(100%);
+}
 .team-grid figcaption {
   font-family: "Caveat", cursive;
   font-size: 20pt;
