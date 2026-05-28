@@ -28,7 +28,13 @@ function Team() {
       <div className="team-grid">
         {TEAM.map((p) => (
           <figure key={p.name}>
-            <img src={p.img} alt={p.name} width={200} height={300} />
+            <img
+              src={p.img}
+              alt={p.name}
+              width={200}
+              height={300}
+              className={p.name === "Katrin Schulte" ? "bw" : undefined}
+            />
             <figcaption>{p.name}</figcaption>
           </figure>
         ))}
