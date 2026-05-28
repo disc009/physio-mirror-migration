@@ -101,10 +101,9 @@ function TherapyCard({ t }: { t: Therapy }) {
   );
 }
 
-function Section({ title, items }: { title: string; items: Therapy[] }) {
+function Section({ items }: { items: Therapy[] }) {
   return (
     <section className="therapy-section">
-      <h2>{title}</h2>
       <div className="therapy-grid">
         {items.map((t) => (
           <TherapyCard key={t.title} t={t} />
@@ -133,7 +132,7 @@ function Therapie() {
         </div>
       </div>
 
-      <Section title="Neurophysiologische Konzepte" items={neuro} />
+      <Section items={[...neuro, ...manuell, ...ergaenzend]} />
 
       <figure className="therapy-figure">
         <img
@@ -141,9 +140,6 @@ function Therapie() {
           alt="Behandlung in der Praxis"
         />
       </figure>
-
-      <Section title="Manuelle Therapien" items={manuell} />
-      <Section title="Ergänzende Angebote" items={ergaenzend} />
 
       <div className="down" />
     </div>
