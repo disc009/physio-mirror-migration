@@ -1,7 +1,6 @@
 import { createServer } from "node:http";
 import { Readable } from "node:stream";
-import app from "./server/server.js";
-
+import app from "./server/index.js";
 const port = Number(process.env.PORT || 3000);
 
 createServer(async (req, res) => {
