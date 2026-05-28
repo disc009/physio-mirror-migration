@@ -132,7 +132,7 @@ function Therapie() {
         </div>
       </div>
 
-      <Section title="Neurophysiologische Konzepte" items={neuro} />
+      <Section items={[...neuro, ...manuell, ...ergaenzend]} />
 
       <figure className="therapy-figure">
         <img
@@ -140,9 +140,6 @@ function Therapie() {
           alt="Behandlung in der Praxis"
         />
       </figure>
-
-      <Section title="Manuelle Therapien" items={manuell} />
-      <Section title="Ergänzende Angebote" items={ergaenzend} />
 
       <div className="down" />
     </div>
