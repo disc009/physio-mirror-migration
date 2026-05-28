@@ -122,15 +122,19 @@ header.site-header {
   height: 107px;
   border-radius: 50%;
   background-color: #B6E624;
-  color: rgb(59, 70, 27);
+  color: #ffffff;
   font-size: 10pt;
   text-decoration: none;
-  transition: background-color 0.2s;
+  outline: 2px solid #B6E624;
+  outline-offset: 3px;
+  transition: background-color 0.2s, outline-color 0.2s;
 }
 .mainmenu ul li a:hover,
 .mainmenu ul li a.active {
   background-color: rgb(242, 150, 175);
+  outline-color: rgb(242, 150, 175);
 }
+
 
 /* Content */
 .content {
